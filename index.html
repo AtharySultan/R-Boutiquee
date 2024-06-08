@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الصفحة الرئيسية - R Boutique</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Your styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://i.pinimg.com/564x/80/19/e9/8019e96f1b1f7c1d0a1f7bf4f41281b2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: rgba(51, 51, 51, 0.8);
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 1em;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 2em;
+            background-color: rgba(255, 255, 255, 0.8);
+            margin: 1em;
+            border-radius: 10px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+.banner {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 2em; /* Increase the padding to make the banners larger */
+    margin: 2em; /* Increase the margin to add space around the banners */
+    border-radius: 5px;
+    width: 45%; /* Decrease the width to allow for two banners side-by-side */
+    text-align: center;
+    float: left; /* Use float to position the banners side-by-side */
+}
+
+.banner:first-of-type {
+    background-image: url('https://i.pinimg.com/564x/8f/1b/4e/8f1b4ebebc23a10b2bd915ba00870426.jpg');
+    background-size: cover;
+    background-position: left;
+    margin-right: 2em; /* Add some space between the banners */
+}
+
+.banner:last-of-type {
+    background-image: url('https://i.pinimg.com/564x/cb/ad/4c/cbad4c3ba9a3ad9026651fd756d5ed2e.jpg');
+    background-size: cover;
+    background-position: right;
+    margin-left: 2em; /* Add some space between the banners */
+}
+
+/* Clear the float after the banners */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+        footer {
+            background-color: rgba(51, 51, 51, 0.8);
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>R Boutique</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">الصفحة الرئيسية</a></li>
+            <li><a href="R Boutique.html#products">المنتجات</a></li>
+            <li><a href="basket.html">سلة التسوق</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <h2>!! R Boutique اهلًا بكم في   </h2>
+    <p>متجرك الشامل لجميع احتياجات الموضة الخاصة بك. استكشفي مجموعتنا المكونة من أحدث الاشياء والكلاسيكيات الخالدة.</p>
+
+    <div class="banner">
+        <h3>High Quality Products</h3>
+        <p>We ensure the highest quality standards for all our products. Each item is carefully inspected to guarantee customer satisfaction.</p>
+    </div>
+    <div class="banner">
+        <h3>Commitment to Excellence</h3>
+        <p>Our commitment to excellence is reflected in our products. We strive to provide the best shopping experience with top-notch customer service.</p>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2024 R Boutique</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R Boutique</title>
+    <link rel="stylesheet" href="styles.css">
+
+        <style>
+
+           body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://i.pinimg.com/564x/80/19/e9/8019e96f1b1f7c1d0a1f7bf4f41281b2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+header {
+    background-color: rgba(51, 51, 51, 0.8);
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 2em;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 1em;
+    border-radius: 10px;
+}
+
+#products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.product {
+    background-color: white;
+    padding: 1em;
+    margin: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 200px;
+    text-align: center;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+
+#basket-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+#basket {
+    background-color: white;
+    padding: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 300px;
+    text-align: center;
+}
+
+#basket ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1em; /* Ensure some space below the list */
+}
+
+#basket li {
+    padding: 0.5em 0;
+    border-bottom: 1px solid #ddd;
+}
+
+#basket p {
+    margin: 1em 0; /* Add margin to ensure space around the total */
+}
+
+footer {
+    background-color: rgba(51, 51, 51, 0.8);
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    bottom: 0;
+    width: 100%;
+    
+}
+
+.product-title {
+    position: absolute;
+    top: 20%; /* Adjust as needed */
+    left: 50%; /* Adjust as needed */
+    transform: translateX(-50%); /* Center horizontally */
+}
+            </style>
+
+
+
+</head>
+<body>
+<header>
+    <h1>R Boutique</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">االصفحة الرئيسة </a></li>
+            <li><a href="index.html#products">المنتجات</a></li>
+            <li><a href="basket.html">سلة التسوق</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <main>
+        <section id="products">
+            <h2 class="product-title">المنتجات</h2>
+            <div class="product">
+                <img src="https://i.pinimg.com/564x/a7/04/cd/a704cde3ef8492382e163284eb18da1b.jpg" alt="Product 1">
+                <h3>أحمر خدود </h3>
+                <p>$50.00</p>
+                <button onclick="addToBasket('Product 1', 10.00)">اضف الى السلة</button>
+            </div>
+            <div class="product">
+                <img src="https://i.pinimg.com/564x/f8/2b/e1/f82be157fe9fbf493a4b03df85748517.jpg" alt="Product 2">
+                <h3>ظلال عيون </h3>
+                <p>$70.00</p>
+                <button onclick="addToBasket('Product 2', 15.00)">اضف الى السلة</button>
+            </div>
+            <div class="product">
+                <img src="https://i.pinimg.com/564x/5d/df/b4/5ddfb41b428922c099c2da363ea4b044.jpg" alt="Product 2">
+                <h3>ماسكارا</h3>
+                <p>$30.00</p>
+                <button onclick="addToBasket('Product 2', 15.00)">اضف الى السلة</button>
+            </div>
+            <div class="product">
+                <img src="https://i.pinimg.com/564x/c1/59/f7/c159f7647dffbbac683638ef8fc4b151.jpg" alt="Product 2">
+                <h3>كريم أساس سائل</h3>
+                <p>$92.00</p>
+                <button onclick="addToBasket('Product 2', 15.00)">اضف الى السلة</button>
+            </div>
+            <div class="product">
+                <img src="https://i.pinimg.com/564x/83/d8/8f/83d88f2ff3a2ce61772b370eb54e67fa.jpg" alt="Product 5">
+                <h3>كريم أساس باودر</h3>
+                <p>$90.00</p>
+                <button onclick="addToBasket('Product 2', 15.00)">اضف الى السلة</button>
+            </div>
+            <div class="product">
+                <img src="https://i.pinimg.com/564x/fa/08/91/fa089100c5b1e5c448ff103c5c96b5fc.jpg" alt="Product 2">
+                <h3>أحمر شفاه بألوان متعدده</h3>
+                <p>$38.00</p>
+                <button onclick="addToBasket('Product 2', 15.00)">اضف الى السلة</button>
+            </div>
+            <div class="product">
+                <img src="https://i.pinimg.com/564x/3f/c2/13/3fc213f0de3f87d89fc13b486245ffe7.jpg" alt="Product 2">
+                <h3>ملمع الشفاه</h3>
+                <p>$29.00</p>
+                <button onclick="addToBasket('Product 2', 15.00)">اضف الى السلة</button>
+            </div>
+            <div class="product">
+                <img src="https://i.pinimg.com/474x/6e/8d/cb/6e8dcb9781d6b5c6594cad61c4dbe979.jpg" alt="Product 2">
+                <h3>اضاءة خد </h3>
+                <p>$88.00</p>
+                <button onclick="addToBasket('Product 2', 15.00)">اضف الى السلة</button>
+            </div>
+            <div class="product">
+                <img src="https://i.pinimg.com/564x/52/b4/77/52b47779054bea38959d9688fb31a290.jpg" alt="Product 2">
+                <h3>كحل أسود </h3>
+                <p>$74.00</p>
+                <button onclick="addToBasket('Product 2', 15.00)">اضف الى السلة</button>
+            </div>
+            <div class="product">
+                <img src="https://i.pinimg.com/564x/dc/d4/42/dcd4429b362a66e82d0d5b98f18768c4.jpg" alt="Product 2">
+                <h3>رسم حواجب بني</h3>
+                <p>$60.00</p>
+                <button onclick="addToBasket('Product 2', 15.00)">اضف الى السلة</button>
+            </div>
+            <div class="product">
+                <img src="https://i.pinimg.com/564x/66/65/d1/6665d11f2878191340fee1bed1246be2.jpg" alt="Product 2">
+                <h3>قلم رسم العين</h3>
+                <p>$50.00</p>
+                <button onclick="addToBasket('Product 2', 15.00)">اضف الى السلة</button>
+            </div>
+            <!-- Add more products as needed -->
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 R Boutique</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+<script src="script.js"></script>
